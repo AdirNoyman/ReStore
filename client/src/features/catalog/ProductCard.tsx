@@ -32,8 +32,8 @@ const ProductCard = ({ product }: Props) => {
 			<CardMedia
 				component='img'
 				sx={{
-					height: '70%',
-					backgroundSize: 'contain',
+					height: '140',
+					background: 'contain',
 					bgcolor: 'primary.light',
 				}}
 				image={product.imageUrl}
