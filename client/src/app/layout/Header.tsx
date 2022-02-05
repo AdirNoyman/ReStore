@@ -7,7 +7,7 @@ interface Props {
 
 const Header = ({ darkMode, handleThemeChange }: Props) => {
 	return (
-		<AppBar position='static' sx={{ mb: 4 }}>
+		<AppBar position='sticky' sx={{ mb: 4 }}>
 			<Toolbar>
 				<Typography variant='h6'>ADIR-STORE</Typography>
 				<Switch

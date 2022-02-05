@@ -33,7 +33,7 @@ const ProductCard = ({ product }: Props) => {
 				component='img'
 				sx={{
 					height: '140',
-					background: 'contain',
+					objectFit: 'contain',
 					bgcolor: 'primary.light',
 				}}
 				image={product.imageUrl}
