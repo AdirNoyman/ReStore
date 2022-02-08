@@ -11,6 +11,7 @@ import {
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import agent from '../../app/api/agent';
 import { Product } from '../../app/models/product';
 
 const ProductDetails = () => {
@@ -20,9 +21,9 @@ const ProductDetails = () => {
 
 	useEffect(() => {
 		// axios returns a promise
-		axios
-			.get(`http://localhost:5000/api/Products/${id}`)
-			.then(response => setProduct(response.data))
+
+		agent.Catalog.details(parseInt(id!))
+			.then(response => setProduct(response))
 			.catch(error => console.log(error))
 			.finally(() => setLoading(false));
 		// we are gonna call useEffect when the components mount (that's the default behaviour) and when the 'id' parameter change (altough it's redundent here, because here it's not relevant because it will not change while we are in this page)
