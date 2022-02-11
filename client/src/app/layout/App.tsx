@@ -12,6 +12,8 @@ import {
 import { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import HomePage from '../../features/Home/HomePage';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 	const [darkMode, setDarkMode] = useState(false);
@@ -32,6 +34,7 @@ function App() {
 
 	return (
 		<ThemeProvider theme={theme}>
+			<ToastContainer position='bottom-right' hideProgressBar />
 			<CssBaseline />
 			<Header darkMode={darkMode} handleThemeChange={handleThemeChange} />
 			<Container>
